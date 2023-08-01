@@ -1,0 +1,84 @@
+Arguments: 
+  C:\Program Files (x86)\nodejs\node.exe C:\Users\ELCOT\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @tesing-library/react react-test-renderer jest-dom --save-dev
+
+PATH: 
+  C:\Users\ELCOT\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ELCOT\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\nodejs;C:\Program Files\Git\cmd;C:\Users\ELCOT\AppData\Roaming\npm;C:\Users\ELCOT\AppData\Local\Programs\Python\Python39\Scripts;C:\Users\ELCOT\AppData\Local\Programs\Python\Python39;C:\Users\ELCOT\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.3\bin;C:\Users\ELCOT\AppData\Roaming\npm;C:\Users\ELCOT\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.17.2
+
+Platform: 
+  win32 ia32
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@tesing-library%2freact: Not found
+      at Request.params.callback [as _callback] (C:\Users\ELCOT\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
+      at Request.self.callback (C:\Users\ELCOT\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
+      at Request.emit (events.js:375:28)
+      at Request.<anonymous> (C:\Users\ELCOT\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
+      at Request.emit (events.js:375:28)
+      at IncomingMessage.<anonymous> (C:\Users\ELCOT\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
+      at Object.onceWrapper (events.js:481:28)
+      at IncomingMessage.emit (events.js:387:35)
+      at endReadableNT (internal/streams/readable.js:1317:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+
+npm manifest: 
+  {
+    "name": "attendance-entry",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "webpack serve --config config/webpack.dev.js",
+      "build": "webpack --config config/webpack.prod.js",
+      "test": "jest"
+    },
+    "dependencies": {
+      "@emotion/react": "^11.8.2",
+      "@emotion/styled": "^11.8.1",
+      "@ipss/utils": "git+https://github.com/VijayakumarDuraisamy/reactUtils.git",
+      "@material-ui/core": "^4.12.3",
+      "@material-ui/icons": "^4.9.1",
+      "@material-ui/lab": "^4.0.0-alpha.60",
+      "@mui/icons-material": "^5.6.2",
+      "@mui/material": "^5.5.1",
+      "@syncfusion/ej2-react-grids": "^19.4.56",
+      "@types/jest": "^27.5.1",
+      "ag-grid-community": "^27.1.0",
+      "ag-grid-react": "^27.1.0",
+      "axios": "^0.26.1",
+      "bootstrap": "^5.1.3",
+      "enzyme": "^3.11.0",
+      "enzyme-adapter-react-16": "^1.15.6",
+      "formik": "^2.2.9",
+      "jest": "^28.1.0",
+      "react": "^17.0.1",
+      "react-alert": "^7.0.3",
+      "react-dom": "^17.0.1",
+      "react-router-dom": "^5.2.0"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.3",
+      "@babel/plugin-transform-runtime": "^7.12.1",
+      "@babel/preset-env": "^7.12.1",
+      "@babel/preset-react": "^7.17.12",
+      "axios-mock-adapter": "^1.20.0",
+      "babel-loader": "^8.1.0",
+      "clean-webpack-plugin": "^3.0.0",
+      "css-loader": "^5.0.0",
+      "html-webpack-plugin": "^4.5.0",
+      "style-loader": "^2.0.0",
+      "webpack": "^5.4.0",
+      "webpack-cli": "^4.1.0",
+      "webpack-dev-server": "^3.11.0",
+      "webpack-merge": "^5.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,445 @@
+/*header*/
+.h1 {
+  color: #010101;
+}
+.appbarGlobal{
+  background: #ffffff00 !important;
+  /* border-radius: 15px; */
+}
+
+
+.MuiButton-root {
+  text-transform: capitalize !important;
+}
+.ag-theme-material .ag-header{
+  background-color:#f8f8f8 !important;
+  --ag-header-foreground-color: rgb(22, 22, 22) !important;
+ 
+}
+.ag-theme-material .ag-checkbox-input-wrapper.ag-checked::after {
+  color: #0B2948 !important;
+}
+
+.ag-row .ag-cell {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center;
+}
+
+
+.MuiBackdrop-root {
+  content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);/* apply the gokul blur */
+    background-color: rgb(116 116 116 / 33%) !important;
+}
+
+
+
+.customizeHeader{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  color: black;
+  /* display: flex; 
+ justify-content: center; */
+}
+
+
+.MuiDialog-paperScrollPaper{
+  border-radius: 25px !important;
+  border: 3px solid #1b4166;
+}
+
+.sub_cancel_button{
+  display: flex;
+  justify-content: center !important;
+}
+.popupform{
+  background-color: #0B2948 !important;
+}
+/*appbar*/
+.rpt_appbar {
+  background-color: #ffffff00;
+  width: 100% !important
+}
+
+
+/*tooltip*/
+.rpt_tooltip {
+  position: relative;
+  display: inline-block;
+
+}
+
+.rpt_tooltip .rpt_tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/*tooltip text*/
+.rpt_tooltip .rpt_tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.rpt_tooltip:hover .rpt_tooltiptext {
+  visibility: visible;
+}
+
+/*Button color*/
+.rpt_icon {
+  color: #010101;
+}
+
+
+
+.rpt_text-align {
+  display: flex;
+  white-space: nowrap;
+  gap: 20px;
+  padding-left: 20px;
+  align-content: center;
+  justify-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rpt_reset_button {
+  margin-left: 10px !important;
+  margin-top: 0px !important;
+  text-transform: capitalize !important;
+}
+
+.rpt_search_button {
+  /* margin-left: 5px !important; */
+  margin-top: 1px;
+  text-transform: capitalize !important;
+
+}
+
+#rpt_search {
+  text-transform: capitalize !important;
+}
+
+
+.rpt_title {
+  text-size-adjust: 10px;
+  font-family: 'Segoe UI';
+  /* font-weight: bold; */
+  font-size: larger;
+  margin-left: 20px !important;
+}
+
+
+
+.report-ag-grid {
+  width: 1400px !important;
+  min-width: 1400px !important;
+  max-width: 2400px !important;
+
+
+}
+
+.MuiButton-label {
+  text-transform: capitalize !important;
+}
+
+.kanbanod_reset_button1 {
+  margin-left: 22px !important;
+  margin-top: 0px !important;
+  text-transform: capitalize !important;
+}
+
+.ser_but10 {
+  display: flex;
+}
+
+.ag-row-hover {
+  /* putting in !important so it overrides the theme's styling as it hovers the row also */
+  background-color: #dfdfff !important;
+}
+
+
+.ag-header-cell-label {
+  justify-content: center;
+}
+
+.ag-column-hover {
+  background-color: #dfffdf !important;
+}
+
+.appcolor {
+  border-radius: 8px;
+  background-color: #E7EDFB;
+  color: black;
+}
+
+.icon {
+  color: black;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  /* bottom: 125%; */
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.appbar29 {
+  background-color: #ffffff00 !important;
+  width: 100%;
+
+}
+
+.txtfield {
+  visibility: hidden;
+}
+
+.bug_tooltip {
+  padding-right: 3vh;
+  position: relative;
+  display: inline-block;
+}
+
+.bug_tooltip1 {
+  position: relative;
+  display: inline-block;
+}
+
+.bug_button {
+  text-transform: capitalize !important;
+  color: white !important;
+}
+
+/* CSS for add bug text fields */
+.row {
+  display: flex;
+  gap: 40px;
+  margin-left: 8px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.row_1 {
+  margin-right: 100px;
+  width: 220px;
+  min-width: 239px;
+  max-width: 220px;
+}
+
+.row_2 {
+  margin-right: 100px;
+  width: 220px;
+  min-width: 239px;
+  max-width: 220px;
+}
+
+.row_3 {
+  width: 220px;
+  min-width: 239px;
+  max-width: 220px;
+  height: -4px;
+}
+
+.btn {
+  color: black;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.addindbutton_1 {
+  margin-right: 80px;
+  margin-top: 20px;
+  width: 5px !important;
+  text-transform: capitalize !important;
+}
+
+.addindbutton_2 {
+  margin-top: 20px;
+  text-transform: capitalize !important;
+
+}
+#cancel {
+  text-transform: capitalize !important;
+  border: 1px solid #ff5252db !important;
+}
+
+#save {
+  text-transform: capitalize !important;
+}
+.Descrip_field{
+  height: 5vh;
+  width: 128vh;
+}
+.dialog_popup{
+  width: 77vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.button_description{
+  width: 223px !important;
+  min-width: 223px !important;
+  border: 1px solid rgba(25, 118, 210, 0.5) !important;
+  color: #1976d2 !important;
+  border-radius: 4px !important;
+  height: 5vh !important;
+}
+.check_icon_desc{
+  color: green;
+  cursor: pointer;
+  /* margin-left: 45vh; */
+}
+
+.AccordionTypo{
+  /* width: 33% !important; */
+  flex-shrink: 0;
+  margin: 1vh !important;
+  font-weight: 700 !important;
+  padding-left: 22px;
+   }
+   .AccordionDescrip{
+     color: #00000096;
+     /* margin: 1vh !important;
+     width: 98vh; */
+    }
+    .bugsheet_filter{
+      display: flex;
+      white-space: nowrap;
+      gap: 20px;
+      padding-left: 20px;
+      align-content: center;
+      justify-items: stretch;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .errorStyle {
+      color: red;
+      font-family: "Helvetica Neue", sans-serif;
+      font-size: small;
+    }
+
+    .am_tab_select.Mui-selected {
+      color: teal  !important;
+      font-weight: 800 !important;
+  }
+  .editiconnote{
+    color: #0024a0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 7px;
+  }
+  .deletebutton1{
+    color: red;
+  }
+  .gokulnewform{
+    display: flex !important;
+    justify-content: flex-end;
+    flex-wrap: wrap !important;
+    flex-direction: column;
+    align-content: space-around;
+  }
+  .add_type_button{
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .ag-root-wrapper {
+    border-radius: 12px;
+}
+
+
+.ag-theme-material .ag-root-wrapper {
+  border: solid 2px #cecece;
+  /* border-color: #babfc7; */
+  border-color: #cecece;
+}
+.cat_type_textfields{
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: baseline;
+}
+.textfieldAsset{
+display: flex;
+flex-direction: row;
+row-gap: 28px;
+margin-left: 26px;
+align-items: center;
+gap: 22;
+justify-content: space-evenly;
+flex-wrap: wrap;
+
+}
+
+

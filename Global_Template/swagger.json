@@ -1,0 +1,596 @@
+{
+    "swagger": "2.0",
+    "host": "64.227.175.61:8080",
+    "schemes": [
+        "http"
+    ],
+    "basePath": "/",
+    "paths": {
+        "/users/": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                },
+                "operationId": "get_users_api",
+                "parameters": [
+                    {
+                        "type": "int",
+                        "description": "Pagination number",
+                        "name": "paged",
+                        "in": "query"
+                    },
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "users"
+                ]
+            },
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/create_user_response"
+                        }
+                    }
+                },
+                "summary": "Create user record and return inserted ID",
+                "description": ":return:",
+                "operationId": "post_users_api",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/create_user"
+                        }
+                    },
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "users"
+                ]
+            }
+        },
+        "/users/login": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/Login%20Response"
+                        }
+                    }
+                },
+                "operationId": "post_auth_api",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/Login%20Request"
+                        }
+                    },
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "authentication"
+                ]
+            }
+        },
+        "/users/{user_id}/": {
+            "parameters": [
+                {
+                    "name": "user_id",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/get_user_response"
+                        }
+                    }
+                },
+                "summary": "Read user record / single record",
+                "description": ":param user_id:\n:return:",
+                "operationId": "get_users_update_api",
+                "parameters": [
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "users"
+                ]
+            },
+            "patch": {
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/update_user_response"
+                        }
+                    }
+                },
+                "summary": "Partial Update user record",
+                "description": ":return:",
+                "operationId": "patch_users_update_api",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/update_user"
+                        }
+                    },
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "users"
+                ]
+            },
+            "delete": {
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/update_user_response"
+                        }
+                    }
+                },
+                "summary": "Soft delete user record",
+                "description": ":return:",
+                "operationId": "delete_users_update_api",
+                "parameters": [
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "users"
+                ]
+            },
+            "put": {
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/update_user_response"
+                        }
+                    }
+                },
+                "summary": "Update user record",
+                "description": ":return:",
+                "operationId": "put_users_update_api",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/update_user"
+                        }
+                    },
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "users"
+                ]
+            }
+        }
+    },
+    "info": {
+        "title": "User's API",
+        "version": "1.0"
+    },
+    "produces": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "securityDefinitions": {
+        "api_key": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "Authorization"
+        }
+    },
+    "security": [
+        {
+            "api_key": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "authentication"
+        },
+        {
+            "name": "users"
+        }
+    ],
+    "definitions": {
+        "Login Request": {
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "Login Response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "access_token": {
+                    "type": "string"
+                },
+                "user": {
+                    "$ref": "#/definitions/user"
+                }
+            },
+            "type": "object"
+        },
+        "user": {
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "firstname": {
+                    "type": "string"
+                },
+                "usersign": {
+                    "type": "string"
+                },
+                "firstlogin": {
+                    "type": "string"
+                },
+                "createdon": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "eviewtype": {
+                    "type": "string"
+                },
+                "userip": {
+                    "type": "string"
+                },
+                "userid": {
+                    "type": "integer"
+                },
+                "userphoto": {
+                    "type": "string"
+                },
+                "emailid": {
+                    "type": "string"
+                },
+                "lastname": {
+                    "type": "string"
+                },
+                "projectid": {
+                    "type": "integer"
+                },
+                "usertype": {
+                    "type": "string"
+                },
+                "rolename": {
+                    "type": "string"
+                },
+                "countrycode": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "string",
+                    "default": "T"
+                },
+                "auvitid": {
+                    "type": "string"
+                },
+                "mobilenumber": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "create_user": {
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "firstname": {
+                    "type": "string"
+                },
+                "usersign": {
+                    "type": "string"
+                },
+                "firstlogin": {
+                    "type": "string"
+                },
+                "createdon": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "eviewtype": {
+                    "type": "string"
+                },
+                "userip": {
+                    "type": "string"
+                },
+                "userid": {
+                    "type": "integer"
+                },
+                "userphoto": {
+                    "type": "string"
+                },
+                "emailid": {
+                    "type": "string"
+                },
+                "lastname": {
+                    "type": "string"
+                },
+                "projectid": {
+                    "type": "integer"
+                },
+                "usertype": {
+                    "type": "string"
+                },
+                "rolename": {
+                    "type": "string"
+                },
+                "countrycode": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "string",
+                    "default": "T"
+                },
+                "auvitid": {
+                    "type": "string"
+                },
+                "mobilenumber": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "repassword": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "response": {
+            "properties": {
+                "total_results": {
+                    "type": "integer"
+                },
+                "page": {
+                    "type": "integer"
+                },
+                "results_per_page": {
+                    "type": "integer"
+                },
+                "results": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/user"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "create_user_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "msg": {
+                    "type": "string"
+                },
+                "inserted_id": {
+                    "type": "integer"
+                },
+                "error": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "update_user": {
+            "properties": {
+                "firstname": {
+                    "type": "string"
+                },
+                "usersign": {
+                    "type": "string"
+                },
+                "firstlogin": {
+                    "type": "string"
+                },
+                "createdon": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "eviewtype": {
+                    "type": "string"
+                },
+                "userip": {
+                    "type": "string"
+                },
+                "userphoto": {
+                    "type": "string"
+                },
+                "emailid": {
+                    "type": "string"
+                },
+                "lastname": {
+                    "type": "string"
+                },
+                "projectid": {
+                    "type": "integer"
+                },
+                "usertype": {
+                    "type": "string"
+                },
+                "rolename": {
+                    "type": "string"
+                },
+                "countrycode": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "string",
+                    "default": "T"
+                },
+                "auvitid": {
+                    "type": "string"
+                },
+                "mobilenumber": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "get_user_response": {
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "firstname": {
+                    "type": "string"
+                },
+                "usersign": {
+                    "type": "string"
+                },
+                "firstlogin": {
+                    "type": "string"
+                },
+                "createdon": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "eviewtype": {
+                    "type": "string"
+                },
+                "userip": {
+                    "type": "string"
+                },
+                "userid": {
+                    "type": "integer"
+                },
+                "userphoto": {
+                    "type": "string"
+                },
+                "emailid": {
+                    "type": "string"
+                },
+                "lastname": {
+                    "type": "string"
+                },
+                "projectid": {
+                    "type": "integer"
+                },
+                "usertype": {
+                    "type": "string"
+                },
+                "rolename": {
+                    "type": "string"
+                },
+                "countrycode": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "string",
+                    "default": "T"
+                },
+                "auvitid": {
+                    "type": "string"
+                },
+                "mobilenumber": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "update_user_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "msg": {
+                    "type": "string"
+                },
+                "error": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "responses": {
+        "ParseError": {
+            "description": "When a mask can't be parsed"
+        },
+        "MaskError": {
+            "description": "When any error occurs on mask"
+        }
+    }
+}
