@@ -2,16 +2,17 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-
+import 'apply_leave.dart'; // Import your ApplyLeavePage file
 
 class LoginPage extends StatefulWidget {
-  final Function(String) login;
+  final Function(String, int) login; // Modify the function signature
 
   LoginPage({required this.login});
 
   @override
   _LoginPageState createState() => _LoginPageState();
 }
+
 class _LoginPageState extends State<LoginPage> {
   TextEditingController _usernameController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
@@ -45,10 +46,19 @@ class _LoginPageState extends State<LoginPage> {
 
       // Check the response status code
       if (response.statusCode == 200) {
-        // Login successful
         String accessToken = json.decode(response.body)['access_token'];
+        int empId = json.decode(response.body)['user']['emp_id'] as int; // Parse emp_id as int
 
-        widget.login(accessToken); // Pass the accessToken to the login function
+        widget.login(accessToken, empId); // Pass both accessToken and empId
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => ApplyLeavePage(
+        //       accessToken: accessToken,
+        //       empId: empId.toString(), // Convert empId to String
+        //     ),
+        //   ),
+        // );
       } else {
         // Login failed
         showDialog(
