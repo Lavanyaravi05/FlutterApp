@@ -1,0 +1,178 @@
+@import "~bootstrap/scss/bootstrap";
+
+.bgColor{
+    background: #f5f5f5;
+}
+.searchText{
+    background: #fff;
+}
+.searchText input {
+    height: 0.5em;
+}
+.searchText .MuiInputBase-root{
+    border-radius: 0px;
+}
+.searchText::placeholder{
+    font-size: 8px !important;
+}
+.searchText fieldset {
+    border: 2px solid #000;
+}
+.navTab li a {
+    color: #000 !important;
+}
+.navTab{
+    padding: 0em 1em;
+}
+.active{
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+}
+.emptyContact{
+    color: #d3d3d3;
+    font-size: 14px;
+    font-weight: bold;
+}
+.emptyContact button {
+    color: #d3d3d3;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0px;
+    border: 0px;
+    text-transform: none;
+    border-radius: 0px;
+    border-bottom: 2px solid #d3d3d3;
+}
+.emptyContact button:hover{
+    background: #98fb98;
+    color: #000;
+}
+.yourSupplier .supplyButton{
+    background: #98fb98;
+    color: #000;
+    text-transform: capitalize;
+    border-radius: 0px;
+    height: 4em;
+}
+.yourSupplier .supplyButton:hover{
+    border: 2px solid #98fb98;
+}
+.yourSupplier .ySupplier {
+    font-weight: bold;
+    padding: 0px 1em;
+}
+.supplierCont{
+    background: #fff;
+}
+.addNewSupplier .MuiDialog-scrollPaper{
+    width: 50%;
+    margin-left: 50%;
+}
+.addNewSupplier .MuiPaper-elevation{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 1em 2em;
+}
+.pointer{
+    cursor: pointer !important;
+}
+.addNewSupplier h5 {
+    font-weight: bold;
+    margin: 0px;
+}
+.addNewSupplier h6 {
+    font-weight: bold;
+    margin: 0px;
+}
+.confirmText input{
+    height: 0em;
+    padding: 16.5px 0px
+}
+.confirmText .MuiOutlinedInput-root{
+    border-radius: 0px;
+    border: 2px solid;
+    height: 2em;
+    padding: 5px 10px;
+}
+
+form{
+    font-size: 14px !important;
+}
+.confirmText .MuiSelect-select{
+    padding: 0px;
+}
+.pL-1{
+    padding-left: 0.25rem !important;
+}
+.pR-1{
+    padding-right: 0.25rem !important;
+}
+.pR-2{
+    padding-right: 0.5rem !important;
+}
+.confirmButton{
+    background: #000 !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    text-transform: none !important;
+    border-radius: 10px !important;
+}
+.confirmButton:hover{
+    box-shadow: 0px 0px #000;
+    border: 2px solid #000 !important;
+    background: #fff !important;
+    color: #000 !important;
+}
+.footer{
+    background: #BEC3C6;
+    color: #fff;
+    padding: 1em;
+}
+.headerNav{
+    position: fixed;
+    border: 1px solid #d3d3d3;
+    z-index: 999 !important;
+    background: #fff !important;
+}
+.headerHead{
+    margin: 0px;
+    padding: 0.5em 1em;
+}
+.outletChildren{
+    margin-top: 4em;
+}
+.avatarImg{
+    background: #d3d3d3;
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sideNavDiv{
+    background: #454647;
+    position: fixed;
+    z-index: 9999 !important;
+    height: 100% !important;
+}
+.sideNavTab .active{
+    border-left: 3px solid #000;
+    border-bottom: none !important;
+    background: #69747A;
+    
+}
+.sideNavTab a{
+    color: #fff !important;
+    padding: 1em;
+}
+.navIcon{
+    font-size: 30px !important;
+}
+.icoName{
+    font-size: 14px !important;
+}
+.mainDiv{
+    margin-left: 16.6%;
+}
